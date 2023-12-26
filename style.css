@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+}
+
+h2 {
+  font-size: 3.4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 3;
+}
+
+option {
+  color: black;
+}
+
+.border-bottom {
+  border-bottom: 9px solid rgb(35, 35, 35);
+}
+
+.container {
+  display: flex;
+  padding: 2rem 0;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 100vw;
+  min-height: max(30vw, 60vh);
+}
+
+.container:nth-of-type(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.dropdown,
+.btn {
+  height: 35px;
+  width: auto;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  background-color: transparent;
+  border: 1px solid gray;
+  font-size: 1.15rem;
+  padding: 0rem 1.5rem;
+}
+
+.btn {
+  padding: 0 1.2rem;
+  background-color: #e50914;
+  border: none;
+}
+
+nav {
+  width: 76vw;
+  height: 5rem;
+  padding-top: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin: 0 12vw;
+}
+
+nav img {
+  width: max(140px, 10vw);
+}
+
+nav div {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#hero {
+  max-width: 100vw;
+  height: max(85vh, 600px);
+  background-image: url(assets/images/bg.jpg);
+  background-size: max(1600px, 125vw);
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow-y: hidden;
+}
+
+#hero > div {
+  max-width: inherit;
+  height: inherit;
+  padding: 10% 5% 2%;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+#hero > div span:first-of-type {
+  font-size: 3.35rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+#hero > div span:nth-of-type(2) {
+  font-size: 1.65rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.container section {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.container > section > p {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.membershipform div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.membershipform input,
+.membershipform button {
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 3.8rem;
+  color: white;
+}
+
+.membershipform input {
+  padding-left: 25px;
+  font-size: 1.1rem;
+  border: 1px solid gray;
+  width: 25vw;
+  background-color: rgba(21, 21, 21, 0.564);
+}
+
+.membershipform input::placeholder {
+  color: rgb(173, 173, 173);
+  font-size: inherit;
+}
+
+.membershipform button {
+  font-size: 1.6rem;
+  padding: 0 1.5rem;
+  gap: 8px;
+}
+
+.media-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-container>img {
+  max-width: 100%;
+  position: absolute;
+}
+
+.media-container>video {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tv {
+  max-width: 73%;
+  transform: translate(-0.5%, -3.3%);
+  z-index: -1;
+}
+#device-pile-in {
+  max-width: 64%;
+  transform: translate(-0.5%, -30%);
+  z-index: -1;
+}
+#download-status {
+  position: absolute;
+  height: min(5rem,15vw);
+  padding: 2%;
+  width: fit-content;
+  transform: translate(0%,130%);
+  border: 2px solid gray;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 70%;
+  background-color: black;
+  z-index: 5;
+}
+#download-status section span:first-of-type{
+font-size:1.5em;
+}
+#download-status section span:last-of-type{
+font-size:1.3em;
+color: #0071eb;
+}
+#download-status img{
+  height: 100%;
+}
+#download-status img:last-of-type{
+  height: 70%;
+}
+#download-status section{
+  width: fit-content;
+  padding-right: 2.5rem;
+}
+
+#faq-section {
+  padding: 4rem 2rem;
+}
+
+#faq-section h2 {
+  text-align: center;
+  margin-bottom: 1.7rem;
+}
+
+#faq ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  margin-bottom: 3vh;
+}
+
+#faq li img {
+  width: 2.5rem;
+}
+
+#faq li {
+  list-style: none;
+  background-color: rgb(45, 45, 45);
+  width: 73vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: background-color 0.25s ease-in-out;
+}
+
+#faq li:hover {
+  background-color: rgb(65, 65, 65);
+}
+
+footer,
+footer li,
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+  list-style: none;
+  font-size: 0.9em;
+}
+
+footer div {
+  display: flex;
+  margin: 25px auto;
+  width: 75vw;
+}
+
+footer li {
+  width: 25%;
+}
+
+footer {
+  padding: 3.5vw 0;
+}
+
+footer .links ul {
+  display: flex;
+  width: inherit;
+  flex-wrap: wrap;
+  row-gap: 15px;
+}
+
+@media only screen and (max-width: 1050px) {
+  nav {
+    width: 94vw;
+    margin: 0 2vw;
+  }
+  nav div {
+    gap: 10px;
+  }
+  .membershipform input {
+    font-size: 1rem;
+    width: 45vw;
+  }
+  #hero > div span:first-of-type {
+    font-size: 3rem;
+  }
+
+  #hero > div span:nth-of-type(2) {
+    font-size: 1.4rem;
+  }
+  h2,
+  #faq-section h2 {
+    font-size: 3rem;
+  }
+  .container section {
+    width: 45vw;
+    height: 40vw;
+  }
+  .container section p {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  #faq-section ul li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: calc(100vw - 100px);
+  }
+  #faq-section ul li img {
+    width: 24px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav img {
+    width: 100px;
+    padding: 0.5rem;
+  }
+
+  h2,
+  #faq-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  #hero {
+    height: 33rem;
+  }
+  #hero > div span:first-of-type {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  #hero > div span:nth-of-type(2) {
+    font-size: 1.2rem;
+  }
+
+  .membershipform input,
+  .membershipform button {
+    height: 3.3rem;
+  }
+
+  .membershipform .btn {
+    font-size: 1.4rem;
+  }
+  .container:nth-of-type(n) {
+    flex-direction: column;
+  }
+  .container section {
+    width: 85%;
+    height: min(600px, 70vw);
+  }
+  .container > :first-child {
+    margin-top: 3rem;
+    height: 3rem;
+    text-align: center;
+  }
+  .container > section > p {
+    font-size: 1.1rem;
+  }
+  #faq li {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 590px) {
+  #hero{
+    height: auto;
+  }
+  #hero>div{
+    padding: 7rem 1rem 2rem;
+    align-items: center;
+  }
+  #hero > div span:first-of-type {
+    font-size: 2rem;
+  }
+  .membershipform div {
+    flex-direction: column;
+  }
+
+  .membershipform input,
+  .membershipform button {
+    height: 3rem;
+  }
+
+  .membershipform .btn {
+    font-size: 1.2rem;
+  }
+  .membershipform input {
+    width: 80vw;
+  }
+
+  .dropdown,.btn{
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+
+  footer div{
+    width: calc(100vw - 3rem);
+  }
+  footer li {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  nav{
+    flex-direction: column;
+  }
+}
