@@ -186,12 +186,12 @@ nav div {
   align-items: center;
 }
 
-.media-container>img {
+.media-container > img {
   max-width: 100%;
   position: absolute;
 }
 
-.media-container>video {
+.media-container > video {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -210,10 +210,10 @@ nav div {
 }
 #download-status {
   position: absolute;
-  height: min(5rem,15vw);
+  height: min(5rem, 15vw);
   padding: 2%;
   width: fit-content;
-  transform: translate(0%,130%);
+  transform: translate(0%, 130%);
   border: 2px solid gray;
   border-radius: 10px;
   display: flex;
@@ -223,20 +223,20 @@ nav div {
   background-color: black;
   z-index: 5;
 }
-#download-status section span:first-of-type{
-font-size:1.5em;
+#download-status section span:first-of-type {
+  font-size: 1.5em;
 }
-#download-status section span:last-of-type{
-font-size:1.3em;
-color: #0071eb;
+#download-status section span:last-of-type {
+  font-size: 1.3em;
+  color: #0071eb;
 }
-#download-status img{
+#download-status img {
   height: 100%;
 }
-#download-status img:last-of-type{
+#download-status img:last-of-type {
   height: 70%;
 }
-#download-status section{
+#download-status section {
   width: fit-content;
   padding-right: 2.5rem;
 }
@@ -255,29 +255,54 @@ color: #0071eb;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 10px;
+  row-gap: 5px;
   margin-bottom: 3vh;
 }
 
 #faq li img {
   width: 2.5rem;
 }
+#faq li .plus{
+  transition: transform 0.25s ease;
+}
 
-#faq li {
+.rotate {
+  transform: rotate(45deg);
+}
+
+#faq li,
+#faq .faqans {
   list-style: none;
   background-color: rgb(45, 45, 45);
   width: 73vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.6rem;
   font-size: 1.6rem;
   font-weight: 400;
+  overflow-y: hidden;
   transition: background-color 0.25s ease-in-out;
+}
+#faq .faqans {
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5px;
+  transition: height 0.90s ease,padding-top 0.10s ease,padding-bottom 0.10s ease;
+}
+
+#faq .faqans.hidden {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0;
+  margin-bottom: 0;
 }
 
 #faq li:hover {
   background-color: rgb(65, 65, 65);
+}
+#faq li .plus:hover {
+  cursor: pointer;
 }
 
 footer,
@@ -343,12 +368,13 @@ footer .links ul {
     font-size: 1.2rem;
   }
 
-  #faq-section ul li {
+  #faq ul li,
+  #faq .faqans {
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: calc(100vw - 100px);
   }
-  #faq-section ul li img {
+  #faq ul li img {
     width: 24px;
   }
 }
@@ -403,15 +429,16 @@ footer .links ul {
   .container > section > p {
     font-size: 1.1rem;
   }
-  #faq li {
+  #faq ul li,
+  #faq .faqans {
     font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 590px) {
-  #hero{
+  #hero {
     height: auto;
   }
-  #hero>div{
+  #hero > div {
     padding: 7rem 1rem 2rem;
     align-items: center;
   }
@@ -434,12 +461,13 @@ footer .links ul {
     width: 80vw;
   }
 
-  .dropdown,.btn{
+  .dropdown,
+  .btn {
     height: 2rem;
     font-size: 0.9rem;
   }
 
-  footer div{
+  footer div {
     width: calc(100vw - 3rem);
   }
   footer li {
@@ -448,7 +476,7 @@ footer .links ul {
 }
 
 @media only screen and (max-width: 420px) {
-  nav{
+  nav {
     flex-direction: column;
   }
 }
