@@ -1,9 +1,16 @@
-const toggler = document.querySelectorAll('.plus');
-// console.log(toggler);
-toggler.forEach((plus) => {
-    plus.addEventListener('click', () => {
-        plus.classList.toggle('rotate');
-        plus.parentElement.nextElementSibling.classList.toggle("hidden");
-        // plus.parentElement.nextElementSibling.classList.toggle("show");
-})
+const toggler = document.querySelectorAll(".toggler");
+toggler.forEach((li) => {
+  li.addEventListener("click", () => {
+    let that=this;
+    toggler.forEach((elem) => {
+      if (elem !== li) {
+        elem.classList.remove("active");
+        elem.nextElementSibling.classList.add("hidden");
+        elem.lastElementChild.classList.remove("rotate");
+      }
+    });
+    li.classList.toggle("active");
+    li.nextElementSibling.classList.toggle("hidden");
+    li.lastElementChild.classList.toggle("rotate");
+  });
 });
